@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Układ Asymetryczny</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 800px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            border-left: 1px solid black;
+            border-right: 1px solid black;
+        }
+
+        .main-content-wrapper {
+            display: flex;
+            flex-grow: 1; /* Wypełnia resztę wysokości */
+            border-top: 1px solid black; /* Ramka dla bloku głównego */
+            border-bottom: 1px solid black;
+        }
+
+        .aside-block {
+            width: 40%; /* Blok boczny zajmuje 40% szerokości */
+            height: 100%;
+            border-right: 1px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        .sections-wrapper {
+            width: 60%; /* Sekcje zajmują pozostałe 60% szerokości */
+            height: 100%;
+            display: flex;
+            flex-direction: column; /* Ustawia sekcje 1 i 2 w kolumnie */
+            box-sizing: border-box;
+        }
+
+        .section-1, .section-2 {
+            height: 50%; /* Równo dzieli przestrzeń pionową */
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .section-1 {
+            border-bottom: 1px solid black;
+        }
+
+        .footer {
+            height: 70px;
+            border-bottom: 1px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="main-content-wrapper">
+            <div class="aside-block">Blok boczny</div>
+            
+            <div class="sections-wrapper">
+                <div class="section-1">Sekcja 1</div>
+                <div class="section-2">Sekcja 2</div>
+            </div>
+        </div>
+
+        <div class="footer">Blok stopki</div>
+    </div>
+
+</body>
+</html>
